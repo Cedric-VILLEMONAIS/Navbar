@@ -6,16 +6,15 @@
 }
 
 :root {
-    --navbar-background-color: rgb(129, 8, 243);
+    --navbar-background-color: aqua;
     --navbar-text-hover: orange;
     --navbar-text-active: green;
     --navbar-box-shadow: 0px 0px 20px 5px #a0a0a0;
-    --navbar-text-color: white;
+    --navbar-text-color: black;
     --navbar-text-font-family: Arial;
     --navbar-text-font-size: 19px;
     --navbar-position: fixed;
     --navbar-next-element-padding-top: 70px;
-    --navbar-mobile-button-lines-color: white;
 }
 
 header {
@@ -60,46 +59,10 @@ header>ul>li>a:hover {
     border-radius: 17px;
 }
 
-.mobile-button {
-    display: none;
-}
+.mobile-mobile-button
 
 @media screen and (max-width: 950px) {
-    header {
-        width: 48px;
-        top: 5px;
-        right: 5px;
-        border-radius: 12px;
-    }
-    header + * {
-        padding-top: 0;
-    }
-    header>ul>li {
+    header>ul {
         display: none;
-    }
-    .mobile-button {
-        display: block;
-        margin: 9px;
-        cursor: pointer;
-    }
-    .mobile-button>div {
-        border: 2px solid var(--navbar-mobile-button-lines-color);
-        border-radius: 100px;
-        width: 30px;
-        margin: 5px 0 5px 0;
-    }
-
-}
-
-.mobile-button.ok>div {
-    animation: test 500ms infinite;
-}
-
-@keyframes test {
-    0% {
-        border-color: orangered;
-    }
-    100% {
-        border-color: blue;
     }
 }
