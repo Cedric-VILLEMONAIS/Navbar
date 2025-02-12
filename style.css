@@ -99,7 +99,9 @@ header>ul>li>a:hover {
 /* Code pour mobile */
 @media screen and (max-width: 950px) {
     header {
+        position: fixed;
         width: 48px;
+        height: 48px;
         top: 5px;
         right: 5px;
         border-radius: 12px;
@@ -107,13 +109,16 @@ header>ul>li>a:hover {
     header + * {
         padding-top: 0;
     }
-    header>ul>li {
+    header>ul {
         display: none;
     }
     .mobile-button {
+        position: fixed;
         display: block;
         margin: 9px;
         cursor: pointer;
+        top: 5px;
+        right: 5px;
     }
     .mobile-button>div {
         border: 2px solid var(--navbar-mobile-button-lines-color);
@@ -121,18 +126,28 @@ header>ul>li>a:hover {
         width: 30px;
         margin: 5px 0 5px 0;
     }
-
 }
 
-.mobile-button.ok>div {
-    animation: test 500ms infinite;
+.mobile-button.active>div:nth-child(1) {
+    animation: mobile-button-animation-line1 500ms forwards;
 }
 
-@keyframes test {
-    0% {
-        border-color: orangered;
-    }
+.mobile-button.active>div:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-button.active>div:nth-child(3) {
+    animation: mobile-button-animation-line3 500ms forwards;
+}
+
+@keyframes mobile-button-animation-line1 {
     100% {
-        border-color: blue;
+        transform: translate(0px, 8px) rotate(45deg);
+    }
+}
+
+@keyframes mobile-button-animation-line3 {
+    100% {
+        transform: translate(0px, -8px) rotate(-45deg);
     }
 }

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const navbar = document.querySelector(".navbar-a-active");
+    const navbar = document.querySelector(".mobile-button");
 
     navbar.addEventListener('click', () => {
-        navbar.classList.toggle('actives');
+        navbar.classList.toggle('active');
     });
 });
