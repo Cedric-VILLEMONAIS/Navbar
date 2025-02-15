@@ -167,12 +167,12 @@ header>ul.active {
 
 @keyframes mobile-button-animation-line1 {
     100% {
-        transform: translate(0px, 8px) rotate(225deg);
+        transform: translate(0px, 9px) rotate(225deg);
     }
 }
 
 @keyframes mobile-button-animation-line3 {
     100% {
-        transform: translate(0px, -8px) rotate(-225deg);
+        transform: translate(0px, -9px) rotate(-225deg);
     }
 }
